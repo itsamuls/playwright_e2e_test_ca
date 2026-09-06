@@ -1,14 +1,11 @@
 # Instructions and Notes
 
-## In this session ...
-
-** Setup Git Repo **
+**Setup Git Repo**
 1. Git commands
 - git init
 - git status
 - git add
 - git commit -m "<commit-message>"'
-
 2. git ignore the following files
 - /debug
 - logs/
@@ -18,25 +15,18 @@
 - example .*
 - *. log
 
-## In this session ...
-
-** Push Changes to Remote **
-
+**Push Changes to Remote**
 1. Git commands
 - `git branch -M main'
 - git remote add origin <remote-url>
 - git remote -v'
 - `git push -u origin main"
-
 2. Issues
 - git config -- list
 - git push -forigin main' -> force push
-
 3. Remember this - `ACP` - `Add commit push`
 
-## In this session ...
-
-** Writing First Test **
+**Writing First Test**
 1. Target web app: https://katalon-demo-cura.herokuapp.com/
 2. Steps
     1. Go to the home page
@@ -55,3 +45,10 @@
 3. Missing `await` keyword before action methods
 4. Done !
 
+**Option 1 - Install VS Code Extension**
+1. VS Code Extension -> Playwright Test for VSCode
+
+**Option 2 - CLI**
+- Help -> `npx playwright codegen -- help`
+- CLI basic command - `npx playwright codegen`
+- With URL `npx playwright codegen https://katalon-demo-cura.herokuapp.com/`

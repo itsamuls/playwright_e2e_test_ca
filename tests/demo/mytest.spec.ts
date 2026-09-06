@@ -8,5 +8,9 @@ test('should load homepage with correct title', async ({ page }) => {
     await expect(page).toHaveTitle('CURA Healthcare Service');
 
     // 3. Assert header text
-    await expect(page.locator('h1')).toHaveText('CURA Healthcare Service');  
-})
+    await expect(page.locator('h1')).toHaveText('CURA Healthcare Service');
+});
+
+test('should perform some test', { tag: '@smoke' }, async ({ page }, testInfo) => {
+    // steps
+});
