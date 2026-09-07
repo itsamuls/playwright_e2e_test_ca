@@ -1,0 +1,111 @@
+Inside that directory, you can run several commands:
+
+  npx playwright test
+    Runs the end-to-end tests.
+
+  npx playwright test --ui
+    Starts the interactive UI mode.
+
+  npx playwright test --project=chromium
+    Runs the tests only on Desktop Chrome.
+
+  npx playwright test example
+    Runs the tests in a specific file.
+
+  npx playwright test --debug
+    Runs the tests in debug mode.
+
+  npx playwright codegen
+    Auto generate tests with Codegen.
+
+We suggest that you begin by typing:
+
+    npx playwright test
+
+And check out the following files:
+  - .\tests\example.spec.ts - Example end-to-end test
+  - .\playwright.config.ts - Playwright Test configuration
+
+
+
+  expect(locator).toBeChecked()
+expect(locator).toBeDisabled()
+expect(locator).toBeEditable()
+expect(locator).toBeEmpty()
+expect(locator).toBeEnabled()
+expect(locator).toBeFocused()
+expect(locator).toBeHidden()
+expect(locator).toBeVisible()
+expect(locator).toContainText(text)
+expect(locator).toHaveAttribute(name)
+expect(locator).toHaveClass(expected)
+expect(locator).toHaveCount(count)
+expect(locator).toHaveCSS(name, value)
+expect(locator).toHaveId(id)
+expect(locator).toHaveJSProperty(name, value)
+expect(locator).toHaveText(expected)
+expect(locator).toHaveValue(value)
+expect(page).toHaveTitle(title)
+expect(page).toHaveURL(url)
+
+Configuration Options
+https://aka.ms/playwright/fixtures
+
+. javaScriptEnabled
+. launchOptions
+. locale
+. offline
+. acceptDownloads
+. baseURL
+. browserName
+. bypassCSP
+. channel
+. colorScheme
+. deviceScaleFactor
+. extraHTPHeaders
+. geolocation
+. hasTouch
+. headless
+. httpCredentials
+. ignoreHTTPSErrors
+. permissions
+. proxy
+. screenshot
+. storageState
+. timezoneId
+. trace
+. userAgent
+. video
+. viewport
+
+
+Most Commonly Used Methods
+
+Method - Description
+goto(url) - Navigate to a URL
+locator(selector) - Create a locator for actions/assertions
+getByRole(), getByText(), getByLabel() - Semantic locators for accessibility-based selectors
+click(selector) - Clicks on a matching element
+fill(selector, value) - Fills an input field
+evaluate(fn, arg) - Runs JavaScript in the browser context
+waitForURL(url) - Wait for navigation to a specific URL
+screenshot() - Capture a screenshot
+title() - Get the page title
+url() - Get the current URL
+
+
+Most Commonly Used Methods
+
+Method - Description
+click() - Click on the located element
+fill(value) - Fill an input or textarea with the specified value
+press(key) - Press a keyboard key on the focused element
+getAttribute(name) - Retrieve a specific attribute from the element
+textContent() - Retrieve the raw text content of the element
+isVisible() - Check if the element is visible
+isHidden() - Check if the element is hidden
+isChecked() - Check if the element is selected (for checkbox/radio)
+check() / uncheck() - Set checkbox/radio to checked or unchecked
+selectOption() - Select an option from a dropdown
+evaluate(fn) - Execute JS in the page context for the matched element
+screenshot() - Take a screenshot of the matched element

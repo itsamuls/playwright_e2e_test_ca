@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "debug-api-adv-cap-login": "set DEBUG=pw:api && npx playwright test tests/demo/pw.adv.cap.login.spec.ts",
     "pw-adv-cap-login": "npx playwright test tests/demo/pw.adv.cap.login.spec.ts --headed",
     "demo-tag-regression": "npx playwright test --grep \"@regression\" --headed",
     "demo-tag-smoke": "npx playwright test --grep \"@smoke\" --headed",

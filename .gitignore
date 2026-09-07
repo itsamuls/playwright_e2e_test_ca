@@ -4,12 +4,12 @@ node_modules/
 /test-results/
 /playwright-report/
 /blob-report/
-/playwright/.cache/
-/playwright/.auth/
-.env
-/debug
-logs/
+# /playwright/.cache/
+# /playwright/.auth/
+# .env
+# /debug
+# logs/
 allure-results
-example.*
-*.log
-commands.txt
+# example.*
+# *.log
+# commands.txt

@@ -56,14 +56,20 @@ export default defineConfig({
     navigationTimeout: 30_000,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-    actionTimeout: 10_000
+    // actionTimeout: 10_000
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {
+        // ...devices['Desktop Chrome'],
+        viewport: null,
+        launchOptions: {
+          args: ['--start-maximized'],
+        }
+      },
     },
 
     // {

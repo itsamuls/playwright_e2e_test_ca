@@ -18,7 +18,7 @@ test.describe('Login Functionlity', { annotation: { type: 'Story', description: 
         /**
         * Capability: Auto-waiting
         * @scenarios
-        * 1. Just location element - Lazy
+        * 1. Just locator element - Lazy
         * 2. Invalid locator on action method
         * 3. Valid locator but invalid action
         * 4. Invalid locator on expect method
