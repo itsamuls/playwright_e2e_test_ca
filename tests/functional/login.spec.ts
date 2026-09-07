@@ -1,18 +1,34 @@
 import { test, expect } from '@playwright/test'
 
-test('should login successfully', async ({ page }) => {
-    // Launch URL
-    await page.goto('https://katalon-demo-cura.herokuapp.com/');
+test.describe('Login Functionlity', () => {
+    
+    test.beforeEach('Go to login page', async({page})=>{
+        // 1. Launch URL
+        await page.goto('https://katalon-demo-cura.herokuapp.com/');
 
-    // 2. Click on the Make Appointment
-    await page.getByRole('link', { name: "Make Appointment" }).click();
-    await expect(page.getByText('Please login to make appointment.')).toBeVisible();
+        // 2. Click on the Make Appointment
+        await page.getByRole('link', { name: "Make Appointment" }).click();
+        await expect(page.getByText('Please login to make appointment.')).toBeVisible();
+    })
 
-    // 3 Login
-    await page.locator('#txt-username').fill('John Doe');
-    await page.locator('#txt-password').fill('ThisIsNotAPassword');
-    await page.getByRole('button', { name: 'Login' }).click();
+    test('should login successfully', async ({ page }) => {
+        // Login
+        await page.locator('#txt-username').fill('John Doe');
+        await page.locator('#txt-password').fill('ThisIsNotAPassword');
+        await page.getByRole('button', { name: 'Login' }).click();
 
-    // Assert the text
-    await expect(page.locator('h2')).toContainText('Make Appointment');
+        // Assert the text
+        await expect(page.locator('h2')).toContainText('Make Appointment');
+    })
+
+    test('should prevent login using the incorrect login data', async ({ page }) => {
+        // Unsuccessful Login
+        await page.locator('#txt-username').fill('John Does');
+        await page.locator('#txt-password').fill('ThisIsNotAPasswordsS');
+        await page.getByRole('button', { name: 'Login' }).click();
+
+        // Assert the error message
+        await expect(page.locator('#login')).toContainText('Login failed! Please ensure the username and password are valid.');
+    })
+
 });

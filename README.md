@@ -52,3 +52,6 @@
 - Help -> `npx playwright codegen -- help`
 - CLI basic command - `npx playwright codegen`
 - With URL `npx playwright codegen https://katalon-demo-cura.herokuapp.com/`
+
+**Interacting With Web Elements**
+- codegen CLI: `npx playwright codegen https://katalon-demo-cura.herokuapp.com/`
