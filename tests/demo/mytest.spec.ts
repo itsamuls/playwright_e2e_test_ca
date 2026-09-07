@@ -11,12 +11,12 @@ test('should load homepage with correct title', async ({ page }) => {
     await expect(page.locator('h1')).toHaveText('CURA Healthcare Service');
 });
 
-test('should perform some test', { tag: '@smoke' }, async ({ page }, testInfo) => {
+test('should perform some test', async ({ page }, testInfo) => {
     // steps
     await page.locator("//h1").click();
 });
 
-test.only('should demo locators', async ({ page }) => {
+test('should demo locators', async ({ page }) => {
 
     // ✅ `page.getBy*()` and `page.locator()` methods returns the `locator` object
     // ✅ The above methods not to be `awaited`
@@ -40,7 +40,16 @@ test.only('should demo locators', async ({ page }) => {
 
     // // Assert the text
     // await expect(page.locator('h2')).toContainText('Make Appointment');
-})
+});
+
+test('should demo config', async ({ page }, testInfo) => {
+    console.log(`Config at runtime: ${JSON.stringify(testInfo.config)}`);
+});
+
+test.only('should demo fixtures', async ({ request }, testInfo) => {
+    // console.log(`Test running on ${browserName}`);
+    // request.
+});
 
 
 

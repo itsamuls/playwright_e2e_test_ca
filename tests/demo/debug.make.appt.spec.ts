@@ -34,7 +34,7 @@ test.describe('Make an appointment', () => {
         // Date input
         await page.getByRole('textbox', { name: 'Visit Date (Required)' }).click();
         await page.getByRole('textbox', { name: 'Visit Date (Required)' }).fill('05/10/2027');
-        await page.getByRole('textbox', { name: 'Visit Date (Required)' }).press('Enter');
+        // await page.getByRole('textbox', { name: 'Visit Date (Required)' }).press('Enter');
         
         // Multiline comment input box 
         await page.getByRole('textbox', { name: 'Comment' }).click();

@@ -13,7 +13,7 @@ test.describe('Login Functionlity', { annotation: { type: 'Story', description: 
         await expect(page.getByText('Please login to make appointment.')).toBeVisible();
     })
 
-    test.only('should login successfully', { tag: '@smoke' }, async ({ page }) => {
+    test('should login successfully', { tag: '@smoke' }, async ({ page }) => {
 
         /**
         * Capability: Auto-waiting
@@ -24,13 +24,19 @@ test.describe('Login Functionlity', { annotation: { type: 'Story', description: 
         * 4. Invalid locator on expect method
         */
 
+        // let element = page.locator('#txt-usernames');
+        // element.fill('John Doe');
+
+        // let element = page.locator('#txt-username');
+        // element.check()
+
         // Login
         await page.locator('#txt-username').fill('John Doe');
         await page.locator('#txt-password').fill('ThisIsNotAPassword');
         await page.getByRole('button', { name: 'Login' }).click();
 
         // Assert the text
-        await expect(page.locator('h2')).toContainText('Make Appointment');
+        await expect(page.locator('h5')).toContainText('Make Appointment');
     })
 
     test('should prevent login using the incorrect login data', async ({ page }) => {

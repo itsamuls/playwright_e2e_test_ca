@@ -1,0 +1,79 @@
+{
+  "argv": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\SoftwareTesting\\Workspaces\\playwright-workspace\\playwright_E2E_Test_CopeAutomation\\node_modules\\@playwright\\test\\cli.js",
+    "test",
+    "tests/demo/mytest.spec.ts",
+    "--headed"
+  ],
+  "configFile": "C:\\SoftwareTesting\\Workspaces\\playwright-workspace\\playwright_E2E_Test_CopeAutomation\\playwright.config.ts",
+  "rootDir": "C:\\SoftwareTesting\\Workspaces\\playwright-workspace\\playwright_E2E_Test_CopeAutomation\\tests",
+  "failOnFlakyTests": false,  
+  "forbidOnly": false,
+  "fullyParallel": true,
+  "globalSetup": null,
+  "globalTeardown": null,
+  "globalTimeout": 0,
+  "grep": {},
+  "grepInvert": null,
+  "maxFailures": 0,
+  "metadata": { "actualWorkers": 1 },
+  "preserveOutput": "always",
+  "projects": [
+    {
+      "grep": {},
+      "grepInvert": null,
+      "outputDir": "C:\\SoftwareTesting\\Workspaces\\playwright-workspace\\playwright_E2E_Test_CopeAutomation\\test-results",
+      "repeatEach": 1,
+      "retries": 0,
+      "metadata": {},
+      "name": "chromium",
+      "testDir": "C:\\SoftwareTesting\\Workspaces\\playwright-workspace\\playwright_E2E_Test_CopeAutomation\\tests",
+      "snapshotDir": "C:\\SoftwareTesting\\Workspaces\\playwright-workspace\\playwright_E2E_Test_CopeAutomation\\tests",
+      "testIgnore": [],
+      "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+      "timeout": 30000,
+      "use": {
+        "trace": "on-first-retry",
+        "ignoreHTTPSErrors": true,
+        "navigationTimeout": 30000,
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36",
+        "viewport": { "width": 1280, "height": 720 },
+        "screen": { "width": 1920, "height": 1080 },
+        "deviceScaleFactor": 1,
+        "isMobile": false,
+        "hasTouch": false,
+        "defaultBrowserType": "chromium",
+        "headless": false
+      },
+      "dependencies": [],
+      "ignoreSnapshots": false,
+      "__projectId": "chromium"
+    }
+  ],
+  "quiet": false,
+  "reporter": [
+    ["html", { "open": "never" }],
+    [
+      "C:\\SoftwareTesting\\Workspaces\\playwright-workspace\\playwright_E2E_Test_CopeAutomation\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+      {
+        "detail": true,
+        "suiteTitle": true,
+        "environmentInfo": {
+          "name": "TEST",
+          "appName": "CURA Healthcare Service",
+          "Release": "Release 1.0",
+          "node_version": "v24.14.1"
+        }
+      }
+    ]
+  ],
+  "reportSlowTests": { "max": 5, "threshold": 300000 },
+  "shard": null,
+  "tags": [],
+  "updateSnapshots": "missing",
+  "updateSourceMethod": "patch",
+  "version": "1.63.0",
+  "workers": 2,
+  "webServer": null
+}
